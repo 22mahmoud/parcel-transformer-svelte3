@@ -17,10 +17,9 @@ function capitalize(str) {
 
 export default new Transformer({
   async loadConfig({ config, options }) {
-    const customOptions = await config.getConfig([
-      '.svelterc',
-      'svelte.config.js',
-    ]);
+    const customOptions =
+      (await config.getConfig(['.svelterc', 'svelte.config.js'])) || {};
+
     const compiler = {
       css: false,
       ...customOptions.compiler,

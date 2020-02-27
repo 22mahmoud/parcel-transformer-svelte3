@@ -1,0 +1,17 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "src/index.html",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel serve src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-alpha.3.2",
+    "parcel-transformer-svelte3": "^1.0.0-alpha.1.1"
+  },
+  "dependencies": {
+    "svelte": "^3.19.1"
+  }
+}

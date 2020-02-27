@@ -1,0 +1,41 @@
+{
+  "name": "parcel-transformer-svelte3",
+  "version": "1.0.0-alpha.1.1",
+  "description": "A svelte v3 transformer plugin for parcel v2",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/22mahmoud/parcel-transformer-svelte3"
+  },
+  "main": "dist/Svelte3Transformer.cjs.js",
+  "module": "dist/Svelte3Transformer.esm.js",
+  "engines": {
+    "node": ">= 10.0.0",
+    "parcel": "^2.0.0-alpha.1.1"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "files": ["dist"],
+  "dependencies": {
+    "@parcel/plugin": "^2.0.0-alpha.3.1"
+  },
+  "peerDependencies": {
+    "svelte": "^3.19.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "rollup": "^1.31.1"
+  }
+}

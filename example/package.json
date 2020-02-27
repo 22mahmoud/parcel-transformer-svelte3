@@ -1,15 +1,25 @@
 {
   "name": "example",
   "version": "1.0.0",
-  "main": "src/index.html",
+  "main": "dist/index.html",
+  "targets": {
+    "main": {
+      "engines": {
+        "node": ">=10.x"
+      }
+    }
+  },
+  "source": "src/index.html",
   "license": "MIT",
   "scripts": {
     "dev": "parcel serve src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "yarn clean && parcel build src/index.html --no-cache",
+    "clean": "rimraf dist"
   },
   "devDependencies": {
     "parcel": "^2.0.0-alpha.3.2",
-    "parcel-transformer-svelte3": "^1.0.0-alpha.1.1"
+    "parcel-transformer-svelte3": "^1.0.0-alpha.1.1",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
     "svelte": "^3.19.1"

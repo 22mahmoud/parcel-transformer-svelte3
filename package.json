@@ -1,8 +1,15 @@
 {
   "name": "parcel-transformer-svelte3",
-  "version": "1.0.0-alpha.1.5",
+  "version": "1.0.0-alpha.1.6",
   "description": "A svelte v3 transformer plugin for parcel v2",
-  "keywords": [],
+  "keywords": [
+    "svelte",
+    "svelte3",
+    "parcel",
+    "parcel-bundler",
+    "parcelv2",
+    "javascript"
+  ],
   "author": "",
   "license": "MIT",
   "publishConfig": {
@@ -19,8 +26,9 @@
     "parcel": "^2.0.0-alpha.1.1"
   },
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "build": "yarn clean && rollup -c",
+    "dev": "rollup -c -w",
+    "clean": "rimraf dist"
   },
   "files": ["dist"],
   "dependencies": {
@@ -36,6 +44,7 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
     "rollup": "^1.31.1"
   }
 }

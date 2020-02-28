@@ -41,14 +41,6 @@ export default new Transformer({
       return [asset];
     }
 
-    // console.log('------------------');
-    // console.log('------------------');
-    // console.log('------------------');
-    // console.log(config, asset.filePath);
-    // console.log('------------------');
-    // console.log('------------------');
-    // console.log('------------------');
-
     let code = await asset.getCode();
     const { compile, preprocess } = await options.packageManager.require(
       'svelte/compiler.js',

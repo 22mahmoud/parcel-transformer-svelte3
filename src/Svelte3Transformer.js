@@ -18,7 +18,9 @@ function capitalize(str) {
 export default new Transformer({
   async loadConfig({ config, options }) {
     const customOptions =
-      (await config.getConfig(['.svelterc', 'svelte.config.js'])) || {};
+      (await config.getConfigFrom('', ['.svelterc', 'svelte.config.js'], {
+        packageKey: 'svelte',
+      })) || {};
 
     const compiler = {
       css: false,
@@ -38,6 +40,14 @@ export default new Transformer({
     if (!config) {
       return [asset];
     }
+
+    // console.log('------------------');
+    // console.log('------------------');
+    // console.log('------------------');
+    // console.log(config, asset.filePath);
+    // console.log('------------------');
+    // console.log('------------------');
+    // console.log('------------------');
 
     let code = await asset.getCode();
     const { compile, preprocess } = await options.packageManager.require(

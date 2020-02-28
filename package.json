@@ -1,6 +1,6 @@
 {
   "name": "parcel-transformer-svelte3",
-  "version": "1.0.0-alpha.1.4",
+  "version": "1.0.0-alpha.1.5",
   "description": "A svelte v3 transformer plugin for parcel v2",
   "keywords": [],
   "author": "",
@@ -24,7 +24,7 @@
   },
   "files": ["dist"],
   "dependencies": {
-    "@parcel/plugin": "^2.0.0-alpha.3.1"
+    "@parcel/plugin": "^2.0.0-nightly.132"
   },
   "peerDependencies": {
     "svelte": "^3.19.1"
